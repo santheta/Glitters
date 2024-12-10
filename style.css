@@ -1,0 +1,42 @@
+body{
+    margin:20px;
+    background-color: black;
+    /* border:2px double goldenrod;
+    border-radius: 0; */
+    color: goldenrod;
+    font-family: monospace;
+
+}
+.header{
+    /* background-image: url(istockphoto-1272315126-612x612.jpg); */
+    
+    background-image: url(istockphoto-1204570367-612x612.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:goldenrod;
+    font-family: fantasy;
+    
+
+}
+button:hover {
+    background-color: #f1bd4d;
+    color: whitesmoke;
+}
+
+button{
+    background-color: rgb(209, 156, 22);
+    color: white;
+    border: none;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 1s;
+
+}
