@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitters Page</title>
+    <style>
+        body{
+            font-family:fantasy;
+            background-color: goldenrod;
+            color:#8a0c0c;
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:700px;
+            
+        }
+        .container{
+            background-color: rgb(91, 91, 201);
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            /* width:300px; */
+            text-align: center;
+
+        }
+        .logo {
+            height:auto;
+            max-width:40%;
+            margin-bottom: 20px;
+            text-align: center;
+            border:2px double goldenrod;
+            border-radius: 50%;
+            justify-content: center;
+            margin:0 auto;
+            display:block;
+            
+            
+        }
+        input[type="text"],
+        input[type="e-mail"],
+        input[type="password"],
+        select{
+            width:90%;
+            text-align: center;
+            padding: 10px;
+            margin:10px 0;
+            border:1px solid skyblue;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .radiogroup{
+            display:flex;
+            justify-content:center;
+            margin:10px 0;
+        }
+        input[type="submit"]{
+            background-color: rgb(253, 226, 163);
+            color: #390101;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 1s;
+
+        }
+        input[type="submit"]:hover {
+            background-color:goldenrod;
+            color: #390101;
+        }
+        .class{
+            padding: 5px;
+            text-align: center;
+
+        }
+        .class:hover{
+            background-color: rgb(16, 14, 14);
+            color:goldenrod;
+            
+            box-shadow:0 0 10px rgba(0,0,0,10px);
+            border: 2px solid black;
+            border-radius: 10px;
+            transition: background-color 1s;
+            
+        }
+        .logo:hover {
+            height:auto;
+            max-width:50%;
+            margin-bottom: 20px;
+            text-align: center;
+            border:2px double goldenrod;
+            border-radius:50% ;
+            justify-content: center;
+            margin:0 auto;
+            display:block;
+            transition: max-width 2s;
+        }
+        h2:hover{
+            color:goldenrod
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".su").on("click",function(){
+                window.location.href="index.html";
+            })
+
+        })
+    </script>
+</head>
+<body>
+    
+    
+    <div class="class">
+        <img src="Glitterslogo.jpg" alt="SOA" class="logo">
+        <h2>Sign in</h2>
+        <form action="Registration">
+            <input type="text" placeholder="Username">
+            <input type="e-Mail" placeholder="E-mail">
+            <input type="password" placeholder="Create a Password">
+            <div class="radiogroup">
+                <label>
+                    <input type="radio" value="male" name="gender">Male
+                </label>
+                <label>
+                    <input type="radio" value="female" name="gender">Female
+                </label>
+            </div>
+            <select >
+
+                <option value="" disabled selected>Select your Location</option>
+                <option value="Iter">Near Iter</option>
+                <option value="kiit">Near KIIT</option>
+                <option value="ouat">Near OUAT</option>
+                <option value="others">Others</option>
+                
+            <br>
+            <input type="submit" value="Submit" class="su">
+
+            
+        </form>
+    </div>    
+</body>
+</html>

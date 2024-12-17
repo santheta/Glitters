@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="services.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Prevent form submission to avoid page reload
+            $('form').on('submit', function (e) {
+                e.preventDefault(); // Stop the form's default submission behavior
+                alert('Form submitted successfully!');
+            });
+
+            // Prevent anchor tags (#) from causing a jump
+            $('a').on('click', function (e) {
+                if ($(this).attr('href') === "#") {
+                    e.preventDefault();
+                }
+            });
+
+            // Animate sections as they scroll into view
+            $(window).on('scroll', function () {
+                $('.animated').each(function () {
+                    if (!$(this).hasClass('animated-done') && $(this).offset().top <= $(window).scrollTop() + $(window).height() - 50) {
+                        $(this).addClass('animated-done');
+                    }
+                });
+            });
+
+            // Trigger animation on page load for elements already in view
+            $(window).trigger('scroll');
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="glit.jpg" alt="" width="400px" height="190px">
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="#Contact">Orders</a>
+    </div>
+    <h1>Our Services</h1>
+    
+    <div class="animated">
+        <h2 style="color:yellow">Printouts:</h2>
+        <ul>
+            <li>Black & White printouts: <a href="https://forms.gle/LFVa7dYtRr3CuN4X6" class="button">Click</a></li>
+            <li>Colored printouts: <a href="https://forms.gle/LFVa7dYtRr3CuN4X6" class="button">Click</a></li>
+            <li>Mini projects: <a href="https://forms.gle/LFVa7dYtRr3CuN4X6" class="button">Click</a></li>
+        </ul>
+    </div>
+
+    <div class="animated">
+        <h2 style="color:yellow">Gift Wrappings</h2>
+        <ul>
+            <li><em>For gift wrapping, you need to come with your gift within the time slot given by you only.</em></li>
+        </ul>
+    </div>
+    
+    <div class="animated">
+        <h2 style="color:yellow">Project Reports</h2>
+        <form action="#" method="post">
+            <label for="subject-name">Subject's Name:</label>
+            <input type="text" id="subject-name" name="subject-name" placeholder="Subject's Name" required><br>
+            
+            <label for="subject-code">Subject's Code:</label>
+            <input type="text" id="subject-code" name="subject-code" placeholder="Subject's Code" required><br>
+            
+            <label for="sem">Semester:</label>
+            <select name="sem" id="sem" required>
+                <option value="" disabled selected>--Sem--</option>
+                <option value="1">1<sup>st</sup></option>
+                <option value="2">2<sup>nd</sup></option>
+                <option value="3">3<sup>rd</sup></option>
+                <option value="4">4<sup>th</sup></option>
+                <option value="5">5<sup>th</sup></option>
+                <option value="6">6<sup>th</sup></option>
+                <option value="7">7<sup>th</sup></option>
+                <option value="8">8<sup>th</sup></option>
+            </select><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>

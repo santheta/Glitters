@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <div class="header">
+        <img src="glit.jpg" alt="" width="400px" height="190px">
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#services">Products</a>
+        <a href="services.html">Services</a>
+        <a href="#Contact">Orders</a>
+    </div>
+    <div id="products">
+        <h2>PRODUCTS</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="notebooks.jpeg" alt="notebook">
+                <h3>Notebooks</h3>
+                <p>Our collection offers a variety of sizes, designs, and paper types to suit all your needs. Whether you’re jotting down notes, sketching your next masterpiece, or keeping a daily journal, our notebooks provide the perfect canvas.</p>
+            </div>
+            <div class="product">
+                <img src="pen.jpeg" alt="pens">
+                <h3>Pens</h3>
+                <p>Elevate your writing and creativity with premium pens, pencils, and markers. Designed for smooth writing, precise drawing, and vibrant coloring, our range is perfect for students, artists, and professionals. Find the right tool for every task and make every project stand out!</p>
+            </div>
+            <div class="product">
+                <img src="colors.jpeg" alt="artsupplies">
+                <h3>Art Supplies</h3>
+                <p >Ignite your creativity with our wide range of art supplies. From sketchpads and brushes to paints and canvas, we have everything you need for your next masterpiece. Perfect for artists of all levels, our quality products help bring your vision to life with ease and precision.</p>
+            </div>
+                <div class="product">
+                    <img src="snacks.jpeg" alt="snacks">
+                    <h3>Snacks</h3>
+                    <p>Satisfy your cravings with our wide selection of tasty eatables. From savory snacks to sweet treats, we offer a variety of options to suit every taste. Perfect for any time of day, our fresh and flavorful items are sure to hit the spot!</p>
+                </div>
+        </div>
+    </div>
+    <div class="product-row">
+        <table id="productTable" border="2">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price Per Unit</th>
+                    <th>Quantity</th>   
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <br>
+        <div class="input-container">
+            <input type="text" id="productt" placeholder="Product" required>
+            <input type="text" id="priceperunit" placeholder="Price Per Unit" required min="0">
+            <input type="number" id="quantity" placeholder="Quantity" required min="1">
+        </div>
+        <button id="clearAll">CLEAR ALL</button>
+        <button id="addRow">ADD PRODUCT</button>
+        <button id="submit"><a href="https://forms.gle/3pHhAdoWi84EwRMt6" target="_blank" style="color:black;text-decoration: none;">SUBMIT</a></button>
+        
+        <br>
+        <span id="error"></span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>$(document).ready(function () {
+        // Add Row Button Functionality
+        $('#addRow').click(function () {
+            var product = $('#productt').val();
+            var priceperunit = $('#priceperunit').val();
+            var quantity = $('#quantity').val();
+    
+            if (product !== '' && priceperunit !== '' && quantity !== '') {
+                if (priceperunit > 0 && quantity > 0) {
+                    // Append new row with a Remove button
+                    $('#table-body').append(`
+                        <tr>
+                            <td>${product}</td>
+                            <td>${priceperunit}</td>
+                            <td>${quantity}</td>
+                            <td><button class="removeRow">REMOVE</button></td>
+                        </tr>
+                    `);
+    
+                    // Clear input fields after adding the row
+                    $('#productt').val('');
+                    $('#priceperunit').val('');
+                    $('#quantity').val('');
+                    $('#error').text('');
+                } else {
+                    $('#error').text('Price per unit and quantity must be positive and greater than 0.');
+                }
+            } else {
+                $('#error').text('Please fill all the fields.');
+            }
+        });
+    
+        // Remove Individual Row Functionality
+        $('#table-body').on('click', '.removeRow', function () {
+            $(this).closest('tr').remove();
+        });
+    
+        // Clear All Rows Button Functionality
+        $('#clearAll').click(function () {
+            $('#table-body').empty();
+        });
+    });
+    </script>
+</body>
+</html>

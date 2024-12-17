@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitters Page</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: black;
+            color: beige;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+        .container {
+            background-color: rgb(91, 91, 201);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            height: auto;
+            max-width: 40%;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 2px double goldenrod;
+            border-radius: 50%;
+            justify-content: center;
+            margin: 0 auto;
+            display: block;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 90%;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid skyblue;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .radiogroup {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #390101;
+            color: goldenrod;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 1s;
+        }
+        button:hover {
+            background-color: goldenrod;
+            color: #390101;
+        }
+        .class {
+            padding: 5px;
+            text-align: center;
+            transition: box-shadow 0.5s;
+        }
+        .class:hover {
+            background-color: rgb(16, 14, 14);
+            color: goldenrod;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5); /* Golden box shadow */
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+        }
+        .logo:hover {
+            height: auto;
+            max-width: 50%;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 2px double goldenrod;
+            border-radius: 50%;
+            justify-content: center;
+            margin: 0 auto;
+            display: block;
+            transition: max-width 2s;
+        }
+        h2:hover {
+            color: goldenrod;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").on("click",function(){
+                window.location.href="index.html";
+            })
+
+        })
+    </script>
+</head>
+<body>
+    
+    <div class="class">
+        <img src="Glitterslogo.jpg" alt="SOA" class="logo">
+        <h2>Login</h2>
+        <form action="Login">
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Create a Password" required>
+            <div class="radiogroup">
+                <label>
+                    <input type="radio" value="pwd" name="gender">Remember my Password
+                </label>
+            </div>
+            <br>
+            
+        </form>
+        <button>Login</button>
+    </div>
+</body>
+</html>
