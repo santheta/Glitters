@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="glit.jpg" type="image/x-icon">
     <title>Glitters Page</title>
     <style>
         body{
@@ -107,6 +108,7 @@
     <script>
         $(document).ready(function(){
             $(".su").on("click",function(){
+                alert("You have successfully created an account");
                 window.location.href="index.html";
             })
 
@@ -119,7 +121,7 @@
     <div class="class">
         <img src="Glitterslogo.jpg" alt="SOA" class="logo">
         <h2>Sign Up</h2>
-        <form action="Registration">
+        <form action="index.html" method="get">
             <input type="text" placeholder="Username">
             <input type="e-Mail" placeholder="E-mail">
             <input type="password" placeholder="Create a Password">
