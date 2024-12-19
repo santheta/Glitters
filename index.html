@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glitters</title>
+    <!--Link to external stylesheet-->
     <link rel="stylesheet" href="styles.css">
+    <!--Favicon for website-->
     <link rel="shortcut icon" href="glit.jpg" type="image/x-icon">
+    <!--Include jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+        //jQuery script to toggle classes on hover
       $(document).ready(function(){
         $("#abt").hover(function(){
-          $("section").toggleClass("dayum")
-          $("span").toggleClass("gg")
-          
-        })
-       
-      })
+          $("section").toggleClass("dayum");//Toggle the "dayum" class for <section>
+          $("span").toggleClass("gg");//Toggle the "gg" class for <span>
+        });
+      });
     </script>
 </head>
 <style>
 </style>
 <body>
+    <!--Header section with logo and navigation buttons-->
   <div class="header">
     <img src="glit.jpg" alt="" width="400px" height="190px">
     <button class="signup"><a href="signup.html" target="_self" style="color:white;text-decoration: none;">Sign Up</a></button>
     <button class="login"><a href="login.html" target="_self" style="color:white;text-decoration: none;;">Login</a></button>
 </div>
+    <!--Navigation bar-->
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="services.html">Services</a>
-    <a href="#orders">Orders</a>
+    <a href="index.html">Home</a><!-- Link to home page -->
+    <a href="products.html">Products</a><!-- Link to products page -->
+    <a href="services.html">Services</a><!-- Link to services page -->
+    <a href="#orders">Orders</a><!-- Link to orders section -->
 </div>
+    <!-- Introductory section -->
     <section class="intro">
         <h2>Simplify Your Shopping Experience with GLITTERS</h2>
         <p>Save your time, and let us handle the rest.</p>
     </section>
+    <!-- Products section -->
     <div class="products">
         <!-- Product 1 -->
         <div class="product product-left">
@@ -74,13 +80,12 @@
           </div>
         </div>
       </div>
-       <!-- About Us Section -->
-   
+    <!-- Footer section -->
+    <!-- About Us Section -->
 
-  <!-- Contact Section -->
   <footer id="contact" class="contact">
     <section class="about-us">
-      <span id="abt">About Us</span>
+      <span id="abt">About Us</span><!-- Toggles styles on hover -->
       <p>
           Welcome to Glitters! Our platform is designed to make your shopping experience smoother and more efficient. With Glitters, you can pre-select your stationery items, place an order, and have them ready for pickup at your convenience. 
       </p>
@@ -94,11 +99,12 @@
           </ul>
       </p>
   </section>
+      <!-- Contact Section -->
       <div class="contact-info">
           <h3>Contact Us</h3>
-          <p>Email: glitterssince2024@gmail.com</p>
-          <p>Phone: +123 456 7890</p>
-          <p>Address: Bhubaneswar</p>
+          <p>Email: glitterssince2024@gmail.com</p><!-- Email address -->
+          <p>Phone: +123 456 7890</p><!-- Phone number -->
+          <p>Address: Bhubaneswar</p><!-- Physical address -->
       </div>
   </footer>
       
