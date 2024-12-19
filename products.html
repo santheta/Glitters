@@ -110,7 +110,11 @@
         });
         //Alert on Submit
         $('#submit').click(function(){
-            alert('Orders recorded Successfully');
+            var hasRows=$('#table-body tr').length>0;
+            if(!hasRows){
+                alert('Please fill out your order.');}
+            else{
+            alert('Orders recorded Successfully');}
         });
     });
     </script>
