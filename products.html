@@ -82,7 +82,7 @@
                             <td>${product}</td>
                             <td>${priceperunit}</td>
                             <td>${quantity}</td>
-                            <td><button class="removeRow">REMOVE</button></td>
+                            <td><button class="removeRow">REMOVE</button></td>  
                         </tr>
                     `);
     
@@ -101,12 +101,12 @@
     
         // Remove Individual Row Functionality
         $('#table-body').on('click', '.removeRow', function () {
-            $(this).closest('tr').remove();
+            $(this).closest('tr').remove();              
         });
     
         // Clear All Rows Button Functionality
         $('#clearAll').click(function () {
-            $('#table-body').empty();
+            $('#table-body').empty();                    
         });
         //Alert on Submit
         $('#submit').click(function(){
