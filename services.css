@@ -51,15 +51,15 @@ h1 {
     font-size: 2.5em;
     color: black;
     background-color: beige;
-    transition: all 0.5s ease-in-out;
-    animation: fadeIn 1s ease-in-out forwards;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
 }
 
 h1:hover {
     letter-spacing: 5px;
     color: black;
     background-color: goldenrod;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 h3 {
@@ -116,7 +116,7 @@ form button {
     font-size: 1em;
     background-color: black;
     color: goldenrod;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 form input::placeholder {
@@ -131,15 +131,15 @@ form button:hover {
     outline: none;
 }
 
-/* Animations */
+/* Animations for fade in effect */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-20px);
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Start slightly above */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at original position */
     }
 }
 
@@ -151,8 +151,8 @@ form button:hover {
 }
 
 .animated.animated-done {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
 }
 
 /* Footer */
