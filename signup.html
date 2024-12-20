@@ -101,8 +101,8 @@
     <script>
         $(document).ready(function(){
             $(".su").on("click",function(){
-                alert("You have successfully created an account");
-                window.location.href="index.html";
+                alert("You have successfully created an account");  /*This alert will be shown after submitting the form*/
+                window.location.href="index.html";                  /*This will redirect you to the homwe page once you filled all the details and submitted the form*/
             })
 
         })
@@ -115,9 +115,9 @@
         <img src="Glitterslogo.jpg" alt="SOA" class="logo">
         <h2>Sign Up</h2>
         <form action="index.html" method="get">
-            <input type="text" placeholder="Username">
-            <input type="e-Mail" placeholder="E-mail">
-            <input type="password" placeholder="Create a Password">
+            <input type="text" placeholder="Username" requried>
+            <input type="e-Mail" placeholder="E-mail" required>
+            <input type="password" placeholder="Create a Password" required>
             <div class="radiogroup">
                 <label>
                     <input type="radio" value="male" name="gender">Male
