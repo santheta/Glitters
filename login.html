@@ -98,12 +98,20 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("button").on("click",function(){
-                alert("You have been logged in successfully!");
-                window.location.href="index.html";
-            })
-        })
+        $(document).ready(function() {
+            $("form").submit(function(event) {
+                event.preventDefault();
+                var email = $("input[type='email']");
+                var password = $("input[type='password']");
+
+                if (email === "" || password === "") {
+                    alert("Please fill in all the details before logging in.");
+                } else {
+                    alert("You have been logged in successfully!");
+                    window.location.href = "index.html";
+                }
+            });
+        });
     </script>
 </head>
 <body>
@@ -120,9 +128,9 @@
                 </label>
             </div>
             <br>
-            
+            <button type="submit">Login</button>
         </form>
-        <button>Login</button>
+        
     </div>
 </body>
 </html>
