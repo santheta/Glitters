@@ -3,6 +3,7 @@
     scroll-behavior: smooth; /* Enable smooth scrolling for the entire document */
     transition:cubic-bezier(0.42, 0, 0, 1.52) 0.4s;/* Apply a smooth transition effect */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     user-select: none;/* Prevent text selection */
 }
 body {
     font-family:fantasy;
